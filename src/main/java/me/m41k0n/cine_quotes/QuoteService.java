@@ -12,7 +12,7 @@ public class QuoteService {
     @Autowired
     private QuoteRepository quoteRepository;
 
-    public List<Quote> getFrase(String title, String character) {
+    public List<Quote> getQuote(String title, String character) {
         Specification<Quote> spec = Specification.where(null);
         spec = addSpecificationIfNotNull(spec, title, QuoteSpecification::hasTitle);
         spec = addSpecificationIfNotNull(spec, character, QuoteSpecification::hasCharacter);

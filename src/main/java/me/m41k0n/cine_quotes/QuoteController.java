@@ -15,8 +15,8 @@ public class QuoteController {
     private QuoteService quoteService;
 
     @GetMapping("/quote")
-    public List<Quote> getFrase(@RequestParam(required = false) String title,
+    public List<Quote> getQuote(@RequestParam(required = false) String title,
                                 @RequestParam(required = false) String character) {
-        return quoteService.getFrase(title, character);
+        return quoteService.getQuote(title, character);
     }
 }
